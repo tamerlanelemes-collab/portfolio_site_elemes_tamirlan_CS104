@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1b1b1b;
+}
+
+/* Шапка по центру */
+header {
+  background: #286b50;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+/* Контент */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Каждая секция как строка резюме */
+section {
+  background: #42ae48;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 4px;
+}
+
+/* Заголовки слева как метки */
+h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #1b1b1b;
+  border-left: 5px solid #286b50;
+  padding-left: 8px;
+}
+
+/* Текст компактный */
+p {
+  margin: 4px 0;
+}
+
+/* Контакты аккуратным списком */
+section:last-child p {
+  margin-left: 10px;
+}
+
+/* Подвал */
+footer {
+  background: #286b50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
