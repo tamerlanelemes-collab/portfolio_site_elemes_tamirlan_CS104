@@ -6,10 +6,19 @@
   <title>Елемес Тамирлан Талгатулы CS-104(c)</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="dark-theme">
 <header>
-  <h1>Елемес Тамирлан Талгатулы CS-104 (c)</h1>
+  <div class="nav-container">
+    <h1>Елемес Тамирлан</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="nav-link active">Главная</a></li>
+        <li><a href="projects.html" class="nav-link">Проекты</a></li>
+        <li><a href="contact.html" class="nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-btn">Светлая тема</button>
+  </div>
 </header>
 
 <main>
@@ -43,9 +52,43 @@
   </section>
 
   <section>
+    <h2>Моя музыка</h2>
+    <p>Вот мои проекты, что были сделаны в FL Studio</p>
+    <div class="music-grid">
+      <div class="music-item">
+        <audio controls>
+          <source src="хз.mp3" type="audio/mpeg">
+          Ваш браузер не поддерживает аудио.
+        </audio>
+        <p class="track-title">хз</p>
+      </div>
+      <div class="music-item">
+        <audio controls>
+          <source src="Project_3.mp3" type="audio/mpeg">
+          Ваш браузер не поддерживает аудио.
+        </audio>
+        <p class="track-title">Project 3, по большей части попробовать</p>
+      </div>
+      <div class="music-item">
+        <audio controls>
+          <source src="хоррор2.m4a" type="audio/mp4">
+          Ваш браузер не поддерживает аудио.
+        </audio>
+        <p class="track-title">Хоррор 2, это ОСТ с атмосферой отчаянья</p>
+      </div>
+      <div class="music-item">
+        <audio controls>
+          <source src="хоррор.mp3" type="audio/mpeg">
+          Ваш браузер не поддерживает аудио.
+        </audio>
+        <p class="track-title">Хоррор</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Проекты</h2>
     <p>Вот несколько моих работ (в процессе доработки и загрузки на GitHub):</p>
-    
     <div class="projects-grid">
       <div class="project-item">
         <img src="1.png" alt="Автопортрет в растровой графике" class="project-img">
@@ -64,7 +107,6 @@
         <p class="project-caption">Проект 4 — Анимация в пиксель арт / процесс</p>
       </div>
     </div>
-
     <p>Больше проектов скоро появится здесь и на <a href="https://github.com/tamerlanelemes-collab" target="_blank">GitHub</a>.</p>
   </section>
 
@@ -85,5 +127,6 @@
   <p>© Елемес Тамирлан Талгатулы</p>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>
