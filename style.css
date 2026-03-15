@@ -6,36 +6,90 @@ body {
   line-height: 1.5;
 }
 
+body.light-theme {
+  background: #f5f5f5;
+  color: #222;
+}
+
 header {
   background: #286b50;
   color: white;
-  text-align: center;
-  padding: 30px 15px;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #e0ffe0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: white;
+  text-decoration: underline;
+}
+
+.theme-btn {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid #e0ffe0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+
+.theme-btn:hover {
+  background: rgba(255,255,255,0.4);
 }
 
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 20px auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 section {
   background: #42ae48;
-  margin-bottom: 16px;
-  padding: 16px 20px;
-  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 h2 {
-  margin: 0 0 10px 0;
-  font-size: 19px;
+  margin: 0 0 15px 0;
+  font-size: 1.5em;
   color: #1b1b1b;
   border-left: 5px solid #286b50;
-  padding-left: 10px;
-}
-
-p {
-  margin: 6px 0;
+  padding-left: 12px;
 }
 
 .about-container {
@@ -54,18 +108,23 @@ p {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-.projects-grid {
+.projects-grid, .music-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin: 20px 0;
 }
 
-.project-item {
+.project-item, .music-item {
+  background: rgba(0,0,0,0.2);
+  padding: 16px;
+  border-radius: 10px;
   text-align: center;
-  background: rgba(0,0,0,0.15);
-  padding: 12px;
-  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.project-item:hover, .music-item:hover {
+  transform: translateY(-5px);
 }
 
 .project-img {
@@ -82,10 +141,15 @@ p {
   transform: scale(1.03);
 }
 
-.project-caption {
+.project-caption, .track-title {
   margin-top: 10px;
-  font-size: 0.95em;
-  color: #ddd;
+  font-weight: bold;
+  color: #e0ffe0;
+}
+
+.music-item audio {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 a {
@@ -103,4 +167,83 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
+}
+
+/* Светлая тема дополнения */
+body.light-theme section {
+  background: #e8f5e9;
+}
+
+body.light-theme .project-item, body.light-theme .music-item {
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+body.light-theme h2 {
+  color: #1b5e20;
+  border-left-color: #3a8c6a;
+}
+
+body.light-theme a, body.light-theme .track-title {
+  color: #1b5e20;
+}
+
+/* Проекты в детальном виде (для projects.html) */
+.projects-section {
+  background: #42ae48 !important;
+}
+
+.project-item h3 {
+  margin: 10px 0 8px;
+  color: #1b1b1b;
+}
+
+.project-links {
+  margin-top: 12px;
+  font-size: 0.95em;
+}
+
+.project-links a {
+  margin: 0 8px;
+}
+
+/* Форма */
+.contact-form {
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.contact-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #286b50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1e5a42;
+}
+
+.future-projects li {
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 6px;
 }
